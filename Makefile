@@ -31,3 +31,9 @@ varlist_capi.o : varlist_capi.cpp
 
 clean :
 	${RM} -rf *.o *.mod f_test_varlist
+
+check: f_test_varlist
+	./$<
+
+# EXAMPLES:
+# make CC=gcc CXX=g++ FC=gfortran FCFLAGS='-cpp -g'
